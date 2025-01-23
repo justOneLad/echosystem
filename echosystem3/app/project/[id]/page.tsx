@@ -87,8 +87,8 @@ export default function ProjectPage() {
 
   const handleShare = async () => {
     const shareData = {
-      title: `${project?.name} on ECHO`,
-      text: `Check out ${project?.name} on ECHO!`,
+      title: `${project?.name} on Hedera EchoSystem Portal`,
+      text: `Check out ${project?.name} on Hedera EchoSystem Portal!`,
       url: window.location.href,
     }
 
@@ -140,13 +140,19 @@ export default function ProjectPage() {
               </div>
               <div className="flex flex-col gap-2">
                 {tokenPrice && (
-                  <Button variant="outline" className="bg-green-500 text-white hover:bg-green-600">
-                    <DollarSign className="w-4 h-4 mr-2" />
-                    {Number.parseFloat(tokenPrice).toLocaleString("en-US", {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 6,
-                    })}{" "}
-                    USD
+                  <Button variant="outline" className="bg-green-500 text-white hover:bg-green-600" asChild>
+                    <a
+                      href={`https://saucerswap.finance/swap?inputToken=0.0.1&outputToken=${project.tokenId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <DollarSign className="w-4 h-4 mr-2" />
+                      {Number.parseFloat(tokenPrice).toLocaleString("en-US", {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 6,
+                      })}{" "}
+                      USD
+                    </a>
                   </Button>
                 )}
                 <Button variant="outline" onClick={handleShare}>
@@ -331,14 +337,14 @@ export default function ProjectPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">About ECHO</h3>
+              <h3 className="text-lg font-semibold mb-4">About Hedera EchoSystem</h3>
               <p className="text-sm text-muted-foreground">
-                ECHO is a platform showcasing projects in the Hedera ecosystem.
+                Hedera EchoSystem is a platform showcasing projects in the Hedera ecosystem.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Donate</h3>
-              <p className="text-sm mb-2">Support the ECHO project:</p>
+              <p className="text-sm mb-2">Support the Hedera EchoSystem project:</p>
               <div className="flex items-center space-x-2">
                 <span className="text-sm font-mono bg-muted p-2 rounded">0.0.000000</span>
                 <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText("0.0.000000")}>
@@ -361,7 +367,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-muted-foreground/10 text-center">
-            <p className="text-sm text-muted-foreground">&copy; 2023 ECHO Project. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">&copy; 2023 Hedera EchoSystem. All rights reserved.</p>
           </div>
         </div>
       </footer>

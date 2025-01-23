@@ -55,32 +55,19 @@ export default function Home() {
             </Button>
           ))}
         </div>
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-4 text-center">Contributors</h2>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-            {["binance", "google", "facebook", "microsoft", "apple", "amazon"].map((brand) => (
-              <Image
-                key={brand}
-                src={`/${brand}-logo.png`}
-                alt={`${brand} logo`}
-                width={100}
-                height={50}
-                objectFit="contain"
-              />
-            ))}
-          </div>
-        </div>
       </main>
       <footer className="bg-secondary py-8 mt-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">About ECHO</h3>
-              <p className="text-sm text-muted-foreground">ECHO is a platform showcasing Hedera ecosystem projects.</p>
+              <h3 className="text-lg font-semibold mb-4">About Hedera EchoSystem</h3>
+              <p className="text-sm text-muted-foreground">
+                Hedera EchoSystem is a platform showcasing Hedera ecosystem projects.
+              </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Donate</h3>
-              <p className="text-sm mb-2">Support the ECHO project:</p>
+              <p className="text-sm mb-2">Support the Hedera EchoSystem project:</p>
               <div className="flex items-center space-x-2">
                 <span className="text-sm font-mono bg-muted p-2 rounded">0.0.000000</span>
                 <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText("0.0.000000")}>
@@ -103,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-muted-foreground/10 text-center">
-            <p className="text-sm text-muted-foreground">&copy; 2023 ECHO Project. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">&copy; 2023 Hedera EchoSystem. All rights reserved.</p>
           </div>
         </div>
       </footer>

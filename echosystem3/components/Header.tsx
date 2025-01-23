@@ -40,8 +40,8 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">
-            <Image src="/echo-logo.svg" alt="ECHO Logo" width={32} height={32} />
-            <span className="hidden font-bold sm:inline-block">ECHO</span>
+            <Image src="/echo-logo.svg" alt="ECHO Logo" width={40} height={40} className="rounded-full" />
+            <span className="font-bold text-sm sm:text-base">Hedera EchoSystem</span>
           </Link>
           {echoPrice && (
             <div className="hidden items-center space-x-2 sm:flex">
